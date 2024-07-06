@@ -1,0 +1,25 @@
+{
+  "name": "gradiweb_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass css/main.scss css/main.css",
+    "watch-css": "sass --watch css/main.scss:css/main.css",
+    "lint": "eslint js/*.js",
+    "format": "prettier --write \"js/**/*.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.4.0",
+    "prettier": "^3.3.2",
+    "sass": "^1.77.6"
+  }
+}

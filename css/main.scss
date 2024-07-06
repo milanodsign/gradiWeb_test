@@ -1,0 +1,136 @@
+$primary-color: #ffdcd3;
+$background-color: #ffffff;
+$background-color-blue: #caf0ff;
+$body-title: #444950;
+$filso-pro: "Signika";
+$playfai-display: "Playfair Display";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $playfai-display;
+  background-color: $background-color;
+  color: $body-title;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 61.6px;
+}
+
+header {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffdcd3;
+  color: #444950;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18.2px;
+  letter-spacing: 2px;
+}
+
+section.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+
+  .topContainerBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 0 10rem;
+    overflow: hidden;
+
+    div {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      position: relative;
+    }
+
+    .disclaimerTop {
+      justify-content: flex-start;
+      position: relative;
+      .bluePill {
+        background-color: $background-color-blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 24px;
+        border-radius: 50px;
+        box-sizing: border-box;
+        position: absolute;
+        left: -1.5vw;
+        top: 10.5vh;
+        z-index: -1;
+      }
+    }
+
+    .btnGroup {
+      justify-content: flex-end;
+      padding-top: 4rem;
+      box-sizing: border-box;
+
+      span {
+        background-color: #ffdcd3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 24px;
+        border-radius: 50px;
+        box-sizing: border-box;
+        button {
+          width: 39.5px;
+          height: 39.5px;
+          border-radius: 100%;
+          border: 0;
+          background-color: $background-color;
+          box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.25);
+          cursor: pointer;
+          transition: all 0.4s ease;
+        }
+        button:hover {
+          box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.4);
+          transition: all 0.4s ease;
+        }
+      }
+      span:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+}
