@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  let slideIndex = 1; // Comenzar en 1 para evitar el primer slide vacío
+  let slideIndex = 0;
   const carousel = document.querySelector(".carousel");
-  let slides = []; // Declarar slides fuera del bloque try
+  let slides = [];
 
   try {
     const response = await fetch(
@@ -10,17 +10,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = await response.json();
 
     slides = data?.products?.nodes?.map((product) => {
+      const { estrellas, totalTag } = calcularEstrellas(product.tags);
+
+      const formatAmount = (amount) => {
+        return parseFloat(amount).toLocaleString("de-DE", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });
+      };
+
       const slide = document.createElement("div");
       slide.classList.add("slide");
       slide.innerHTML = `
         <span class="contImg">
             <img src="${product.featuredImage.url}" alt="${product.title}">
-            <button class="addCart">ADD CART</button>
+            <button class="addCart">ADD TO CART</button>
         </span>
         <div class="caption">
-          <h3>${product.title}</h3>
-          <div class="info"></div>
-          <p>${product.prices.min.amount}</p>
+          <span class="productTitle">${product.title}</span>
+          <div class="info">
+            <span class="productStars"><span class="stars">${"★".repeat(estrellas)}</span> (${totalTag})</span>
+            <span class="productAmount">
+                <span>
+                    ${product.prices.min.currencyCode === "EUR" ? "€" : "$"}
+                    ${formatAmount(product.prices.min.amount)}
+                </span>
+                <span>
+                    ${product.prices.max.currencyCode === "EUR" ? "€" : "$"}
+                    ${formatAmount(product.prices.max.amount)}
+                </span>
+            </span>
+          </div>
+          <p></p>
         </div>
       `;
       return slide;
@@ -38,7 +59,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const setupCarousel = () => {
     const slideWidth = carousel.querySelector(".slide").offsetWidth;
 
-    // Clonar slides al inicio y al final para hacer el carrusel infinito
     const firstSlides = Array.from(carousel.querySelectorAll(".slide")).slice(
       0,
       slides.length
@@ -79,7 +99,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     showSlides();
   });
 
-  // Opcional: Resetear el índice y desplazamiento para mantener el ciclo infinito al cargar
   carousel.addEventListener("transitionend", () => {
     if (slideIndex === slides.length + 1) {
       carousel.style.transition = "none";
@@ -98,3 +117,37 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 });
+
+const calcularEstrellas = (tags) => {
+  let total = 0;
+
+  const valorNumerico = tags
+    .filter((tag) => !isNaN(tag))
+    .map((tag) => parseInt(tag));
+
+  if (valorNumerico.length === 0) {
+    return { estrellas: 0, totalTag: 0 };
+  }
+
+  total = Math.round(
+    valorNumerico.reduce((acc, val) => acc + val, 0) / valorNumerico.length
+  );
+
+  let estrellas = 0;
+
+  if (total >= 0 && total < 100) {
+    estrellas = 1;
+  } else if (total >= 100 && total < 200) {
+    estrellas = 2;
+  } else if (total >= 200 && total < 300) {
+    estrellas = 3;
+  } else if (total >= 300 && total < 400) {
+    estrellas = 4;
+  } else if (total >= 400 && total <= 500) {
+    estrellas = 5;
+  } else {
+    estrellas = 0;
+  }
+
+  return { estrellas, totalTag: total };
+};

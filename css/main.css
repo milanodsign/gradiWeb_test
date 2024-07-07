@@ -1,10 +1,136 @@
+@font-face {
+  font-family: "Abhaya Libre";
+  font-weight: 700;
+  src: url("./fonts/AbhayaLibre-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Abhaya Libre";
+  font-weight: 800;
+  src: url("./fonts/AbhayaLibre-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Abhaya Libre";
+  font-weight: 500;
+  src: url("./fonts/AbhayaLibre-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Abhaya Libre";
+  font-weight: 400;
+  src: url("./fonts/AbhayaLibre-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Abhaya Libre";
+  font-weight: 600;
+  src: url("./fonts/AbhayaLibre-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProBlack.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProBlackItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProBoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProBook.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProBookItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProHeavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProHeavyItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProLightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProMediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProRegular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProRegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProThin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FilsonPro";
+  src: url("../fonts/FilsonProThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neogrotesk";
+  font-weight: 700;
+  src: url("../fonts/NeogroteskEssBold.otf") format("opentype");
+}
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Playfair Display";
+  font-family: "abhayaLibre";
   background-color: #ffffff;
   color: #444950;
   display: flex;
@@ -13,12 +139,20 @@ body {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  overflow: hidden auto;
 }
 
 h2 {
   font-size: 44px;
   font-weight: 700;
   line-height: 61.6px;
+}
+
+button {
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
 }
 
 header {
@@ -33,7 +167,8 @@ header {
   font-size: 13px;
   font-weight: 700;
   line-height: 18.2px;
-  letter-spacing: 2px;
+  box-sizing: border-box;
+  padding: 7px 0;
 }
 
 section.banner {
@@ -97,12 +232,8 @@ section.banner .topContainerBanner .btnGroup span {
 section.banner .topContainerBanner .btnGroup span button {
   width: 39.5px;
   height: 39.5px;
-  border-radius: 100%;
-  border: 0;
   background-color: #ffffff;
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 0.4s ease;
 }
 section.banner .topContainerBanner .btnGroup span button:hover {
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.4);
@@ -120,6 +251,206 @@ section.banner .carousel {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 15px;
+}
+section.banner .carousel .slide {
+  font-family: "FilsonPro";
+}
+section.banner .carousel .slide span.contImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+section.banner .carousel .slide span.contImg button.addCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 1rem;
+  width: calc(100% - 2rem);
+  height: 48px;
+  color: #efa693;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26.8px;
+  font-family: "Neogrotesk";
+}
+section.banner .carousel .slide .caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 0.75rem;
+  font-weight: 500;
+}
+section.banner .carousel .slide .caption span.productTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-weight: 500;
+  line-height: 23.76px;
+  font-size: 18px;
+  font-family: "FilsonPro";
+}
+section.banner .carousel .slide .caption .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+section.banner .carousel .slide .caption .info span.productStars {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19.6px;
+  font-family: "FilsonPro";
+  margin-right: 0.25rem;
+}
+section.banner .carousel .slide .caption .info span.productStars span.stars {
+  color: #ffc658;
+  font-weight: 700;
+  font-family: "FilsonPro";
+}
+section.banner .carousel .slide .caption .info span.productAmount span {
+  font-size: 14px;
+  line-height: 27px;
+  font-family: "FilsonPro";
+}
+section.banner .carousel .slide .caption .info span.productAmount span:first-child {
+  font-weight: 300;
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+  font-family: "FilsonPro";
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+main section.callToAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 4rem 0;
+}
+main section.callToAction button.btnCallToAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 237px;
+  height: 48px;
+  font-family: "Neogrotesk";
+  background-color: #efa693;
+  color: #ffffff;
+}
+main section.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 550px;
+  background: url(../assets/waveBackgroundBlue.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 5.5rem;
+  box-sizing: border-box;
+}
+main section.newsletter h2 {
+  text-align: center;
+}
+main section.newsletter p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 350;
+  line-height: 27px;
+  color: #939393;
+  font-family: "FilsonPro";
+  margin-top: 30px;
+}
+main section.newsletter form.newsletterForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 5px;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+main section.newsletter form.newsletterForm input[type=text] {
+  width: 360px;
+  height: 48px;
+  border-radius: 50px;
+  border: solid 1px #efa693;
+  color: #939393;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+main section.newsletter form.newsletterForm input[type=text]:focus {
+  border-color: #ffdcd3;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+  outline: none;
+}
+main section.newsletter form.newsletterForm input[type=text]:active {
+  border-color: #ffdcd3;
+  box-shadow: 0 0 5px rgba(53, 122, 189, 0.5);
+  outline: none;
+}
+main section.newsletter form.newsletterForm button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 119px;
+  height: 48px;
+  font-family: "Neogrotesk";
+  background-color: #efa693;
+  color: #ffffff;
+}
+main section.newsletter .contPillAbsolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section.newsletter .contPillAbsolute img {
+  position: absolute;
+}
+main section.newsletter .contPillAbsolute img:first-child {
+  top: 18vh;
+  left: 7vw;
+}
+main section.newsletter .contPillAbsolute img:nth-child(2) {
+  top: 23vh;
+  left: 22vw;
+}
+main section.newsletter .contPillAbsolute img:nth-child(3) {
+  top: 15vh;
+  right: 5vw;
+}
+main section.newsletter .contPillAbsolute img:nth-child(4) {
+  bottom: 15vh;
+  left: 2vw;
+}
+main section.newsletter .contPillAbsolute img:last-child {
+  bottom: 20vh;
+  right: 12.5vw;
 }
 
 /*# sourceMappingURL=main.css.map */

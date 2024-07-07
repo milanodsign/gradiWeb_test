@@ -1,9 +1,7 @@
-$primary-color: #ffdcd3;
-$background-color: #ffffff;
-$background-color-blue: #caf0ff;
-$body-title: #444950;
-$filso-pro: "Signika";
-$playfai-display: "Playfair Display";
+@import "abhayaLibre";
+@import "filsonPro";
+@import "neogroteskEssBold";
+@import "variables";
 
 * {
   margin: 0;
@@ -11,8 +9,8 @@ $playfai-display: "Playfair Display";
 }
 
 body {
-  font-family: $playfai-display;
-  background-color: $background-color;
+  font-family: $abhaya-libre;
+  background-color: $white-color;
   color: $body-title;
   display: flex;
   justify-content: flex-start;
@@ -20,12 +18,20 @@ body {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  overflow: hidden auto;
 }
 
 h2 {
   font-size: 44px;
   font-weight: 700;
   line-height: 61.6px;
+}
+
+button {
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
 }
 
 header {
@@ -40,7 +46,8 @@ header {
   font-size: 13px;
   font-weight: 700;
   line-height: 18.2px;
-  letter-spacing: 2px;
+  box-sizing: border-box;
+  padding: 7px 0;
 }
 
 section.banner {
@@ -73,7 +80,7 @@ section.banner {
       justify-content: flex-start;
       position: relative;
       .bluePill {
-        background-color: $background-color-blue;
+        background-color: $blue-color;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -105,12 +112,8 @@ section.banner {
         button {
           width: 39.5px;
           height: 39.5px;
-          border-radius: 100%;
-          border: 0;
-          background-color: $background-color;
+          background-color: $white-color;
           box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.25);
-          cursor: pointer;
-          transition: all 0.4s ease;
         }
         button:hover {
           box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.4);
@@ -132,5 +135,227 @@ section.banner {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 15px;
+
+    .slide {
+      font-family: $filson-pro;
+
+      span.contImg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+
+        button.addCart {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          bottom: 1rem;
+          width: calc(100% - 2rem);
+          height: 48px;
+          color: $pink-color-dark;
+          background-color: $white-color;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 26.8px;
+          font-family: $neogroteskEssBold;
+        }
+      }
+      .caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding-top: 0.75rem;
+        font-weight: 500;
+
+        span.productTitle {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          font-weight: 500;
+          line-height: 23.76px;
+          font-size: 18px;
+          font-family: $filson-pro;
+        }
+
+        .info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+
+          span.productStars {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 19.6px;
+            font-family: $filson-pro;
+            margin-right: 0.25rem;
+
+            span.stars {
+              color: $yellow-color;
+              font-weight: 700;
+              font-family: $filson-pro;
+            }
+          }
+
+          span.productAmount {
+            span {
+              font-size: 14px;
+              line-height: 27px;
+              font-family: $filson-pro;
+            }
+            span:first-child {
+              font-weight: 300;
+              text-decoration: line-through;
+              margin-right: 0.5rem;
+              font-family: $filson-pro;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+
+  section.callToAction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 4rem 0;
+
+    button.btnCallToAction {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 237px;
+      height: 48px;
+      font-family: $neogroteskEssBold;
+      background-color: $pink-color-dark;
+      color: $white-color;
+    }
+  }
+
+  section.newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 550px;
+    background: url(../assets/waveBackgroundBlue.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 5.5rem;
+    box-sizing: border-box;
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      font-size: 15px;
+      font-weight: 350;
+      line-height: 27px;
+      color: $gray-color;
+      font-family: $filson-pro;
+      margin-top: 30px;
+    }
+
+    form.newsletterForm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      gap: 5px;
+      position: relative;
+      width: auto;
+      height: auto;
+
+      input[type="text"] {
+        width: 360px;
+        height: 48px;
+        border-radius: 50px;
+        border: solid 1px $pink-color-dark;
+        color: $gray-color;
+        padding: 1rem;
+        box-sizing: border-box;
+
+        &:focus {
+          border-color: $pink-color-light;
+          box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+          outline: none;
+        }
+
+        &:active {
+          border-color: $pink-color-light;
+          box-shadow: 0 0 5px rgba(53, 122, 189, 0.5);
+          outline: none;
+        }
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 119px;
+        height: 48px;
+        font-family: $neogroteskEssBold;
+        background-color: $pink-color-dark;
+        color: $white-color;
+      }
+    }
+    .contPillAbsolute {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        position: absolute;
+      }
+
+      img:first-child {
+        top: 18vh;
+        left: 7vw;
+      }
+      img:nth-child(2) {
+        top: 23vh;
+        left: 22vw;
+      }
+      img:nth-child(3) {
+        top: 15vh;
+        right: 5vw;
+      }
+      img:nth-child(4) {
+        bottom: 15vh;
+        left: 2vw;
+      }
+      img:last-child {
+        bottom: 20vh;
+        right: 12.5vw;
+      }
+    }
   }
 }
