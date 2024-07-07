@@ -2,6 +2,8 @@
 @import "filsonPro";
 @import "neogroteskEssBold";
 @import "variables";
+@import "partials/variables";
+@import "partials/mixins";
 
 * {
   margin: 0;
@@ -275,6 +277,7 @@ main {
 
     h2 {
       text-align: center;
+      padding: 0 20rem;
     }
 
     p {
@@ -285,6 +288,7 @@ main {
       color: $gray-color;
       font-family: $filson-pro;
       margin-top: 30px;
+      padding: 0 25rem;
     }
 
     form.newsletterForm {
@@ -373,3 +377,5 @@ main {
     }
   }
 }
+
+@import "partials/responsive";

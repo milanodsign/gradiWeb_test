@@ -378,6 +378,7 @@ main section.newsletter {
 }
 main section.newsletter h2 {
   text-align: center;
+  padding: 0 20rem;
 }
 main section.newsletter p {
   text-align: center;
@@ -387,6 +388,7 @@ main section.newsletter p {
   color: #939393;
   font-family: "FilsonPro";
   margin-top: 30px;
+  padding: 0 25rem;
 }
 main section.newsletter form.newsletterForm {
   display: flex;
@@ -464,6 +466,278 @@ main section.newsletter .contPillAbsolute img:nth-child(4) {
 main section.newsletter .contPillAbsolute img:last-child {
   bottom: 20vh;
   right: 12.5vw;
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+    line-height: 35.84px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  h2 {
+    font-size: 28px;
+    line-height: 35.84px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.banner .topContainerBanner {
+    flex-direction: column;
+    padding: 0 33px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  section.banner .topContainerBanner {
+    flex-direction: column;
+    padding: 0 33px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section.banner .topContainerBanner div {
+    width: 100%;
+    height: 50%;
+  }
+}
+@media only screen and (max-width: 515px) {
+  section.banner .topContainerBanner div {
+    width: 100%;
+    height: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section.banner .topContainerBanner .disclaimerTop {
+    align-items: center;
+    height: auto;
+    padding-top: 30px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  section.banner .topContainerBanner .disclaimerTop {
+    align-items: center;
+    height: auto;
+    padding-top: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section.banner .topContainerBanner .disclaimerTop .bluePill {
+    top: 46px;
+    left: -3px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  section.banner .topContainerBanner .disclaimerTop .bluePill {
+    top: 46px;
+    left: -3px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section.banner .topContainerBanner .btnGroup {
+    padding: 30px 0 50px;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (max-width: 515px) {
+  section.banner .topContainerBanner .btnGroup {
+    padding: 30px 0 50px;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section.banner .carousel .slide {
+    width: 247px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  section.banner .carousel .slide {
+    width: 247px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section.banner .carousel .slide .contImg {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 515px) {
+  section.banner .carousel .slide .contImg {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section.banner .carousel .slide .contImg img {
+    width: 247px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  section.banner .carousel .slide .contImg img {
+    width: 247px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.banner .carousel .slide .caption .info {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 515px) {
+  section.banner .carousel .slide .caption .info {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.banner .carousel .slide .caption .info span {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 515px) {
+  section.banner .carousel .slide .caption .info span {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main section.newsletter {
+    padding: 150px 20px 0;
+    box-sizing: border-box;
+    background-position: inherit;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (max-width: 515px) {
+  main section.newsletter {
+    padding: 150px 20px 0;
+    box-sizing: border-box;
+    background-position: inherit;
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main section.newsletter h2,
+  main section.newsletter p {
+    z-index: 1;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 515px) {
+  main section.newsletter h2,
+  main section.newsletter p {
+    z-index: 1;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main section.newsletter form.newsletterForm {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  main section.newsletter form.newsletterForm {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main section.newsletter form.newsletterForm input[type=text] {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 515px) {
+  main section.newsletter form.newsletterForm input[type=text] {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main section.newsletter form.newsletterForm button {
+    width: 199px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  main section.newsletter form.newsletterForm button {
+    width: 199px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main section.newsletter .contPillAbsolute img:first-child {
+    top: 11vh;
+    left: 7vw;
+    width: 30px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  main section.newsletter .contPillAbsolute img:first-child {
+    top: 11vh;
+    left: 7vw;
+    width: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main section.newsletter .contPillAbsolute img:nth-child(2) {
+    top: 15vh;
+    left: 40vw;
+    width: 29.95px;
+    height: 31.17px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  main section.newsletter .contPillAbsolute img:nth-child(2) {
+    top: 15vh;
+    left: 40vw;
+    width: 29.95px;
+    height: 31.17px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main section.newsletter .contPillAbsolute img:nth-child(3) {
+    top: 29vh;
+    right: 5vw;
+    width: 50px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  main section.newsletter .contPillAbsolute img:nth-child(3) {
+    top: 29vh;
+    right: 5vw;
+    width: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main section.newsletter .contPillAbsolute img:nth-child(4) {
+    bottom: 40vh;
+    left: 0;
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  main section.newsletter .contPillAbsolute img:nth-child(4) {
+    bottom: 40vh;
+    left: 0;
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main section.newsletter .contPillAbsolute img:last-child {
+    bottom: 29vh;
+    right: 24vw;
+    width: 30px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  main section.newsletter .contPillAbsolute img:last-child {
+    bottom: 29vh;
+    right: 24vw;
+    width: 30px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
