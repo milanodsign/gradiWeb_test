@@ -161,6 +161,10 @@ section.banner {
           line-height: 26.8px;
           font-family: $neogroteskEssBold;
         }
+        button:hover {
+          box-shadow: 0 0 5px rgba(53, 122, 189, 0.5);
+          transition: all 0.4s ease;
+        }
       }
       .caption {
         display: flex;
@@ -248,6 +252,10 @@ main {
       background-color: $pink-color-dark;
       color: $white-color;
     }
+    button:hover {
+      box-shadow: 0 0 5px rgba(53, 122, 189, 0.5);
+      transition: all 0.4s ease;
+    }
   }
 
   section.newsletter {
@@ -288,6 +296,7 @@ main {
       position: relative;
       width: auto;
       height: auto;
+      z-index: 1;
 
       input[type="text"] {
         width: 360px;
@@ -320,6 +329,11 @@ main {
         font-family: $neogroteskEssBold;
         background-color: $pink-color-dark;
         color: $white-color;
+      }
+
+      button:hover {
+        box-shadow: 0 0 5px rgba(53, 122, 189, 0.5);
+        transition: all 0.4s ease;
       }
     }
     .contPillAbsolute {

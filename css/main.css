@@ -277,6 +277,10 @@ section.banner .carousel .slide span.contImg button.addCart {
   line-height: 26.8px;
   font-family: "Neogrotesk";
 }
+section.banner .carousel .slide span.contImg button:hover {
+  box-shadow: 0 0 5px rgba(53, 122, 189, 0.5);
+  transition: all 0.4s ease;
+}
 section.banner .carousel .slide .caption {
   display: flex;
   flex-direction: column;
@@ -353,6 +357,10 @@ main section.callToAction button.btnCallToAction {
   background-color: #efa693;
   color: #ffffff;
 }
+main section.callToAction button:hover {
+  box-shadow: 0 0 5px rgba(53, 122, 189, 0.5);
+  transition: all 0.4s ease;
+}
 main section.newsletter {
   display: flex;
   align-items: center;
@@ -389,6 +397,7 @@ main section.newsletter form.newsletterForm {
   position: relative;
   width: auto;
   height: auto;
+  z-index: 1;
 }
 main section.newsletter form.newsletterForm input[type=text] {
   width: 360px;
@@ -418,6 +427,10 @@ main section.newsletter form.newsletterForm button {
   font-family: "Neogrotesk";
   background-color: #efa693;
   color: #ffffff;
+}
+main section.newsletter form.newsletterForm button:hover {
+  box-shadow: 0 0 5px rgba(53, 122, 189, 0.5);
+  transition: all 0.4s ease;
 }
 main section.newsletter .contPillAbsolute {
   position: absolute;

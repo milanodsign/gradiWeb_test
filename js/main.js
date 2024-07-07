@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  let slideIndex = 0;
+  let slideIndex = 1;
   const carousel = document.querySelector(".carousel");
   let slides = [];
 
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     );
     const data = await response.json();
 
-    slides = data?.products?.nodes?.map((product) => {
+    slides = data?.products?.nodes?.map((product, index) => {
       const { estrellas, totalTag } = calcularEstrellas(product.tags);
 
       const formatAmount = (amount) => {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       slide.innerHTML = `
         <span class="contImg">
             <img src="${product.featuredImage.url}" alt="${product.title}">
-            <button class="addCart">ADD TO CART</button>
+            <button class="addCart">${index % 2 === 0 ? "ADD TO CART" : "SEE MORE"}</button>
         </span>
         <div class="caption">
           <span class="productTitle">${product.title}</span>
