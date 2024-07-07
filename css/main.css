@@ -378,7 +378,7 @@ main section.newsletter {
 }
 main section.newsletter h2 {
   text-align: center;
-  padding: 0 20rem;
+  padding: 0 25rem;
 }
 main section.newsletter p {
   text-align: center;
@@ -388,7 +388,7 @@ main section.newsletter p {
   color: #939393;
   font-family: "FilsonPro";
   margin-top: 30px;
-  padding: 0 25rem;
+  padding: 0 33rem;
 }
 main section.newsletter form.newsletterForm {
   display: flex;
